@@ -21,7 +21,7 @@ def clean_text(html: str) -> str:
 
 @app.get("/")
 def health():
-    return "ok", 200
+    return jsonify({"status": "ok", "service": "nutraneo-site-scraper"}), 200
 
 
 @app.post("/scrape")
